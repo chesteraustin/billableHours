@@ -23,3 +23,15 @@ $(document).ready(function(){
 	});
 });
 
+database.ref().on("child_added", function(snapshot, prevChildKey){
+		var newPost = snapshot.val();
+		console.log ("Name: " + newPost.employeeName);
+		console.log ("Monthly Rate: " + newPost.monthlyRate);
+		console.log ("Role: " + newPost.role);
+		console.log ("Start Date: " + newPost.startDate);
+
+});
+
+
+
+
