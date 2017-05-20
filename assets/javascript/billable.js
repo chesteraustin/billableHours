@@ -25,13 +25,24 @@ $(document).ready(function(){
 
 database.ref().on("child_added", function(snapshot, prevChildKey){
 		var newPost = snapshot.val();
-		console.log ("Name: " + newPost.employeeName);
-		console.log ("Monthly Rate: " + newPost.monthlyRate);
-		console.log ("Role: " + newPost.role);
-		console.log ("Start Date: " + newPost.startDate);
 
+		var employeeNames = newPost.employeeName;
+		var monthlyRates = newPost.monthlyRate;
+		var roles = newPost.role;
+		var startDates = newPost.startDate;
+
+		var names_td = $("<td>").text(employeeNames);
+		var monthlyRates_td = $("<td>").text(monthlyRates);
+		var roles_td = $("<td>").text(roles);
+		var startDates_td = $("<td>").text(startDates);
+
+		var employees_tr = $("<tr>").append(names_td)
+									.append(monthlyRates_td)
+									.append(roles_td)
+									.append(startDates_td);
+
+		$("#employees > tbody").append(employees_tr);
 });
-
 
 
 
