@@ -14,5 +14,5 @@ $("#add-user").on("click", function() {
 		$("#start-date-input").text()
 		$("monthly-rate-input").text()*/
 
-};
+});
 
