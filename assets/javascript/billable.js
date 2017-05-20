@@ -5,6 +5,8 @@ $(document).ready(function(){
 	$("#add-user").on("click", function() {
 		console.log("click");
 
+		event.preventDefault();
+
 		var employeeName = $("#name-input").val();
 		var monthlyRate = $("#monthly-rate-input").val();
 		var role = $("#role-input").val();
